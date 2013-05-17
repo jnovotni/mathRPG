@@ -3,7 +3,8 @@ game.PlayScreen = me.ScreenObject.extend({
 	 *  action to perform on state change
 	 */
 	onResetEvent: function() {	
-      ; // TODO
+        // load our level
+        me.levelDirector.loadLevel("area01");
 	},
 	
 	

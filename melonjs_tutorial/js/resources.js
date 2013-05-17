@@ -4,6 +4,12 @@ game.resources = [
 	 * @example
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
+
+    // the tileset for the map
+    {name: "area01_level_tiles",    type:"image",   src: "data/img/maps/area01_level_tiles.png"},
+
+
+
 	
 	/* Atlases 
 	 * @example
@@ -15,6 +21,11 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
  	 */
+
+    // the map we created
+    {name: "area01", type: "tmx", src: "data/map/area01.tmx"}
+
+
 
 	/* Background music. 
 	 * @example
