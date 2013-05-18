@@ -9,6 +9,8 @@ game.resources = [
     {name: "area01_level_tiles",    type:"image",   src: "data/img/maps/area01_level_tiles.png"},
 
 
+    // main character
+    {name: "gripe_run_right", type:"image", src: "data/img/sprites/gripe_run_right.png"},
 
 	
 	/* Atlases 

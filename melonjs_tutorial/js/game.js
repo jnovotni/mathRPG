@@ -4,7 +4,7 @@ var game = {
     // Run on page load.
     "onload" : function () {
         // Initialize the video.
-        if (!me.video.init("screen", 640, 480, true, 1)) {
+        if (!me.video.init("screen", 640, 480, true, "auto")) {
             alert("Your browser does not support HTML5 canvas.");
             return;
         }
@@ -33,10 +33,23 @@ var game = {
 
     // Run on game resources loaded.
     "loaded" : function () {
-        me.state.set(me.state.MENU, new game.TitleScreen());
+        // me.state.set(me.state.MENU, new game.TitleScreen());
         me.state.set(me.state.PLAY, new game.PlayScreen());
+
+        // add our player entity in the entity pool
+        me.entityPool.add("mainPlayer", game.PlayerEntity);
+                 
+        // enable the keyboard
+        me.input.bindKey(me.input.KEY.LEFT,  "left");
+        me.input.bindKey(me.input.KEY.RIGHT, "right");
+        me.input.bindKey(me.input.KEY.X,     "jump",    true);
+                                                     // lock=true
+          
 
         // Start the game.
         me.state.change(me.state.PLAY);
+
+        // collision debugging
+        me.debug.renderHitBox = true;
     }
 };
